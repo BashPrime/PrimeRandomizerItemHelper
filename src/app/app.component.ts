@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Directive, ViewChild } from '@angular/core';
+
+import { NavigationComponent } from './navigation.component';
 
 @Component({
   selector: 'app-root',
