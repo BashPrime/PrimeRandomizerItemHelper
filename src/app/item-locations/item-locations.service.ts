@@ -11,7 +11,7 @@ export class ItemLocationsService {
     }
 
     public getItemLocations(): Observable<any> {
-        return this.http.request("/assets/json/locations.json")
+        return this.http.request("./assets/json/locations.json")
             .map(res => res.json());
     }
 }
