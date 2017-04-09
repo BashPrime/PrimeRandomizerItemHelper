@@ -9,7 +9,7 @@ import { ItemLocationsService } from './item-locations.service';
   providers: [ItemLocationsService]
 })
 export class ItemLocationsComponent {
-  private itemLocations: Observable<Array<any>>;
+  public itemLocations: Observable<Array<any>>;
   constructor(private locationsService: ItemLocationsService) {
     this.itemLocations = locationsService.getItemLocations();
   }
