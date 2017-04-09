@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation.component';
-import { ItemLocationsComponent } from './item-locations/item-locations.component'
+import { ItemLocationsComponent } from './item-locations/item-locations.component';
 
 @NgModule({
   declarations: [
