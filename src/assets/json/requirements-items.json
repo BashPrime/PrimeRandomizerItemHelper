@@ -1,0 +1,42 @@
+{
+  "wave": [
+    "Wave Beam"
+  ],
+  "ice": [
+    "Ice Beam"
+  ],
+  "plasma": [
+    "Plasma Beam"
+  ],
+  "boost": [
+    "Boost Ball"
+  ],
+  "spider": [
+    "Spider Ball"
+  ],
+  "supers": [
+    "Super Missile",
+    "Charge Beam"
+  ],
+  "charge": [
+    "Charge Beam"
+  ],
+  "phazon": [
+    "Phazon Suit"
+  ],
+  "pb": [
+    "Power Bomb Expansion"
+  ],
+  "xray": [
+    "X-Ray Visor"
+  ],
+  "sj": [
+    "Space Jump Boots"
+  ],
+  "grapple" : [
+    "Grapple Beam"
+  ],
+  "gravity": [
+    "Gravity Suit"
+  ]
+}

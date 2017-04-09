@@ -1,0 +1,694 @@
+[
+  {
+    "area": "Chozo",
+    "location": "Main Plaza (Half-Pipe)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Main Plaza (Grapple Ledge)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Main Plaza (Tree)",
+    "item": "Missile Expansion",
+    "requires": [
+      ["supers"]
+    ]
+  },
+  {
+    "area": "Chozo",
+    "location": "Main Plaza (Locked Door)",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Chozo",
+    "location": "Ruined Fountain",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Ruined Shrine (\"Beetle Battle\")",
+    "item": "Morph Ball"
+  },
+  {
+    "area": "Chozo",
+    "location": "Ruined Shrine (Half-Pipe)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Ruined Shrine (Lower Tunnel)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Vault",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Training Chamber",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Chozo",
+    "location": "Ruined Nursery",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Training Chamber Access",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave"]
+    ]
+  },
+  {
+    "area": "Chozo",
+    "location": "Magma Pool",
+    "item": "Power Bomb Expansion",
+    "requires": [
+      ["pb"],
+      ["boost"]
+    ]
+  },
+  {
+    "area": "Chozo",
+    "location": "Tower of Light",
+    "item": "Wavebuster"
+  },
+  {
+    "area": "Chozo",
+    "location": "Tower Chamber",
+    "item": "Artifact of Lifegiver",
+    "requires": [
+      ["wave"]
+    ]
+  },
+  {
+    "area": "Chozo",
+    "location": "Ruined Gallery (Missile Wall)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Ruined Gallery (Tunnel)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Transport Access North",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Chozo",
+    "location": "Gathering Hall",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Hive Totem",
+    "item": "Missile Launcher"
+  },
+  {
+    "area": "Chozo",
+    "location": "Sunchamber (Flaahgra)",
+    "item": "Varia Suit"
+  },
+  {
+    "area": "Chozo",
+    "location": "Sunchamber (Ghosts)",
+    "item": "Artifact of Wild"
+  },
+  {
+    "area": "Chozo",
+    "location": "Watery Hall Access",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Watery Hall (Scan Puzzle)",
+    "item": "Charge Beam"
+  },
+  {
+    "area": "Chozo",
+    "location": "Watery Hall (Underwater)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Dynamo (Lower)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Dynamo (Spider Track)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Burn Dome (Missile)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Burn Dome (I. Drone)",
+    "item": "Morph Ball Bomb"
+  },
+  {
+    "area": "Chozo",
+    "location": "Furnace (Spider Tracks)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Chozo",
+    "location": "Furnace (Inside Furnace)",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Chozo",
+    "location": "Hall of the Elders",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Chozo",
+    "location": "Crossway",
+    "item": "Missile Expansion",
+    "requires": [
+     ["sj"],
+     ["boost", "spider"]
+     ]
+  },
+  {
+    "area": "Chozo",
+    "location": "Elder Chamber",
+    "item": "Artifact of World",
+    "requires": [
+      ["ice", "boost"],
+      ["ice", "plasma"]
+    ]
+  },
+  {
+    "area": "Chozo",
+    "location": "Antechamber",
+    "item": "Ice Beam",
+    "requires": [
+      ["ice"],
+      ["pb"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Phendrana Shorelines (Behind Ice)",
+    "item": "Missile Expansion",
+    "requires": [
+      ["plasma"],
+      ["boost"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Phendrana Shorelines (Spider Track)",
+    "item": "Missile Expansion",
+    "requires": [
+      ["supers", "spider"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Chozo Ice Temple",
+    "item": "Artifact of Sun",
+    "requires": [
+      ["boost"],
+      ["plasma"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Ice Ruins West",
+    "item": "Power Bomb Expansion",
+    "requires": [
+      ["plasma"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Ice Ruins East (Behind Ice)",
+    "item": "Missile Expansion",
+    "requires": [
+      ["plasma"],
+      ["boost"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Ice Ruins East (Spider Track)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Phendrana",
+    "location": "Chapel of the Elders",
+    "item": "Wave Beam",
+    "requires": [
+      ["pb"],
+      ["wave"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Ruined Courtyard",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Phendrana",
+    "location": "Phendrana Canyon",
+    "item": "Boost Ball"
+  },
+  {
+    "area": "Phendrana",
+    "location": "Quarantine Cave",
+    "item": "Spider Ball",
+    "requires": [
+    ["wave"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Research Lab Hydra",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "supers"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Quarantine Monitor",
+    "item": "Missile Expansion",
+    "requires": [
+     ["wave"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Observatory",
+    "item": "Super Missile",
+    "requires": [
+      ["wave", "sj"],
+      ["wave", "ice", "boost"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Transport Access",
+    "item": "Energy Tank",
+    "requires": [
+      ["plasma", "ice", "wave"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Control Tower",
+    "item": "Artifact of Elder",
+    "requires": [
+      ["wave", "sj"],
+      ["wave", "ice", "plasma"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Research Core",
+    "item": "Thermal Visor",
+    "requires": [
+      ["wave", "ice"],
+      ["wave", "sj"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Frost Cave",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Research Lab Aether (Tank)",
+    "item": "Energy Tank",
+    "requires": [
+      ["wave", "sj"],
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Research Lab Aether (Morph Track)",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "sj"],
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Gravity Chamber (Underwater)",
+    "item": "Gravity Suit",
+    "requires": [
+      ["wave", "ice", "sj"],
+      ["wave", "ice", "gravity"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Gravity Chamber (Grapple Ledge)",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice", "sj"],
+      ["wave", "ice", "plasma", "grapple"],
+      ["wave", "ice", "charge"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Storage Cave",
+    "item": "Artifact of Spirit",
+    "requires": [
+      ["plasma", "wave", "ice"]
+    ]
+  },
+  {
+    "area": "Phendrana",
+    "location": "Security Cave",
+    "item": "Power Bomb Expansion",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Landing Site",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Tallon",
+    "location": "Alcove",
+    "item": "Space Jump Boots"
+  },
+  {
+    "area": "Tallon",
+    "location": "Frigate Crash Site",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Tallon",
+    "location": "Overgrown Cavern",
+    "item": "Missile Expansion",
+    "requires": [
+      ["ice"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Root Cave",
+    "item": "Missile Expansion",
+    "requires": [
+      ["sj"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Artifact Temple",
+    "item": "Artifact of Truth"
+  },
+  {
+    "area": "Tallon",
+    "location": "Transport Tunnel B",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Tallon",
+    "location": "Arbor Chamber",
+    "item": "Missile Expansion",
+    "requires": [
+      ["sj"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Cargo Freight Lift to Deck Gamma",
+    "item": "Energy Tank",
+    "requires": [
+      ["ice", "wave"],
+      ["ice", "gravity"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Biohazard Containment",
+    "item": "Missile Expansion",
+    "requires": [
+      ["ice", "supers", "wave"],
+      ["ice", "supers", "gravity"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Hydro Access Tunnel",
+    "item": "Energy Tank",
+    "requires": [
+      ["ice", "gravity"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Great Tree Chamber",
+    "item": "Missile Expansion",
+    "requires": [
+      ["ice"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Life Grove Tunnel",
+    "item": "Missile Expansion",
+    "requires": [
+      ["ice"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Life Grove (Start)",
+    "item": "X-Ray Visor",
+    "requires": [
+      ["ice", "pb"]
+    ]
+  },
+  {
+    "area": "Tallon",
+    "location": "Life Grove (Underwater Spinner)",
+    "item": "Artifact of Chozo",
+    "requires": [
+      ["ice"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Main Quarry",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Security Access A",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice", "pb"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Storage Depot B",
+    "item": "Grapple Beam",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Storage Depot A",
+    "item": "Flamethrower",
+    "requires": [
+      ["wave", "ice", "plasma", "pb"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Elite Research (Phazon Elite)",
+    "item": "Artifact of Warrior",
+    "requires": [
+      ["wave", "ice", "pb"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Elite Research (Laser)",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Elite Control Access",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Ventilation Shaft",
+    "item": "Energy Tank",
+    "requires": [
+      ["wave", "ice", "pb"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Phazon Processing Center",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice", "pb"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Processing Center Access",
+    "item": "Energy Tank",
+    "requires": [
+      ["wave", "ice", "plasma", "pb"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Elite Quarters",
+    "item": "Phazon Suit",
+    "requires": [
+      ["wave", "ice", "plasma", "xray"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Central Dynamo",
+    "item": "Power Bomb",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Metroid Quarantine B",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice", "plasma", "supers"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Metroid Quarantine A",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Fungal Hall B",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice", "plasma"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Phazon Mining Tunnel",
+    "item": "Artifact of Newborn",
+    "requires": [
+      ["wave", "ice", "plasma"]
+    ]
+  },
+  {
+    "area": "Mines",
+    "location": "Fungal Hall Access",
+    "item": "Missile Expansion",
+    "requires": [
+      ["wave", "ice", "plasma"]
+    ]
+  },
+  {
+    "area": "Magmoor",
+    "location": "Lava Lake",
+    "item": "Artifact of Nature"
+  },
+  {
+    "area": "Magmoor",
+    "location": "Triclops Pit",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Magmoor",
+    "location": "Storage Cavern",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Magmoor",
+    "location": "Transport Tunnel A",
+    "item": "Energy Tank"
+  },
+  {
+    "area": "Magmoor",
+    "location": "Warrior Shrine",
+    "item": "Artifact of Strength"
+  },
+  {
+    "area": "Magmoor",
+    "location": "Shore Tunnel",
+    "item": "Ice Spreader",
+    "requires": [
+      ["pb"]
+    ]
+  },
+  {
+    "area": "Magmoor",
+    "location": "Fiery Shores (Morph Track)",
+    "item": "Missile Expansion"
+  },
+  {
+    "area": "Magmoor",
+    "location": "Fiery Shores (Warrior Shrine Tunnel)",
+    "item": "Power Bomb Expansion",
+    "requires": [
+      ["pb"]
+    ]
+  },
+  {
+    "area": "Magmoor",
+    "location": "Plasma Processing",
+    "item": "Plasma Beam",
+    "requires": [
+      ["wave", "ice"]
+    ]
+  },
+  {
+    "area": "Magmoor",
+    "location": "Magmoor Workstation",
+    "item": "Energy Tank",
+    "requires": [
+      ["wave"]
+    ]
+  }
+]
