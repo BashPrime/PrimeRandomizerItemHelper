@@ -1,6 +1,8 @@
 <h2>Item Locations</h2>
-<div *ngFor="let itemLocation of itemLocations | async">
-    <span>Item: {{ itemLocation.item }}</span>, 
-    <span>Area: {{ itemLocation.area }}</span>, 
-    <span>Location: {{ itemLocation.location }}</span>
-</div>
+<ul class="list-group">
+    <li *ngFor="let itemLocation of itemLocations | async" class="list-group-item">
+        <span>Item: {{ itemLocation.item }}</span>, 
+        <span>Area: {{ itemLocation.area }}</span>, 
+        <span>Location: {{ itemLocation.location }}</span>
+    </li>
+</ul>
