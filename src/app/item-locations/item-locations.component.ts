@@ -13,7 +13,7 @@ export class ItemLocationsComponent {
     public itemLocations: Object;
     public areaKeys: Array<any>;
     constructor(private locationsService: ItemLocationsService) {
-        this.itemLocations = [];
+        this.itemLocations = {};
         this.buildItemLocations();
     }
 
@@ -21,10 +21,12 @@ export class ItemLocationsComponent {
         this.locationsService.getItemLocations()
             .subscribe(items => {
                 for (let item of items) {
+                    let itemArea = item.area;
                     // Group all items under the same area
-                    if (this.itemLocations[item.area] === undefined)
-                        this.itemLocations[item.area] = [];
-                    this.itemLocations[item.area].push({location: item.location, item: item.item});
+                    if (this.itemLocations[itemArea] === undefined)
+                        this.itemLocations[itemArea] = [];
+                    delete item.area;
+                    this.itemLocations[itemArea].push(item);
                 }
                 this.areaKeys = Object.keys(this.itemLocations);
             });
