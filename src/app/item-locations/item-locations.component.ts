@@ -27,10 +27,16 @@ export class ItemLocationsComponent {
                     // Group all items under the same area
                     if (this.itemLocations[itemArea] === undefined)
                         this.itemLocations[itemArea] = [];
-                    delete item.area;
-                    this.itemLocations[itemArea].push(item);
+                    this.itemLocations[itemArea].push(this.processItemLocation(item));
                 }
                 this.areaKeys = Object.keys(this.itemLocations);
             });
+    }
+
+    processItemLocation(itemLocation: Object): Object {
+        itemLocation["found"]= false;
+        itemLocation["obtained"] = false;
+        delete itemLocation["area"];
+        return itemLocation;
     }
 }
