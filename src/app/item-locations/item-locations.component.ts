@@ -33,10 +33,20 @@ export class ItemLocationsComponent {
             });
     }
 
-    processItemLocation(itemLocation: Object): Object {
-        itemLocation["found"]= false;
-        itemLocation["obtained"] = false;
-        delete itemLocation["area"];
+    processItemLocation(itemLocation): Object {
+        itemLocation.found = false;
+        itemLocation.obtained = false;
+        delete itemLocation.area;
         return itemLocation;
+    }
+
+    shouldShowLocation(itemLocation): boolean {
+        if (this.locationShowModel === "all")
+            return true;
+        else if (this.locationShowModel === "found" && itemLocation.found === true)
+            return true;
+        else if (this.locationShowModel === "remaining" && (itemLocation.obtained === undefined || itemLocation.obtained === false))
+            return true;
+        return false;
     }
 }
