@@ -12,9 +12,11 @@ import { ItemLocationsService } from './item-locations.service';
 export class ItemLocationsComponent {
     public itemLocations: Object;
     public areaKeys: Array<any>;
+    public locationShowModel: string;
     constructor(private locationsService: ItemLocationsService) {
         this.itemLocations = {};
         this.buildItemLocations();
+        this.locationShowModel = "all";
     }
 
     buildItemLocations(): void {

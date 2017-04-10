@@ -1,4 +1,11 @@
 <h2>Item Locations</h2>
+<div class="input-group">
+      <div class="input-group-btn">
+        <label class="btn btn-default" [(ngModel)]="locationShowModel" btnRadio="all">All</label>
+        <label class="btn btn-default" [(ngModel)]="locationShowModel" btnRadio="found">Found</label>
+        <label class="btn btn-default" [(ngModel)]="locationShowModel" btnRadio="remaining">Remaining</label>
+      </div>
+    </div>
 <ul class="list-group">
     <div *ngFor="let area of areaKeys">
         <li *ngFor="let itemLocation of itemLocations[area]" class="list-group-item item-{{ area.toLowerCase() }}">
