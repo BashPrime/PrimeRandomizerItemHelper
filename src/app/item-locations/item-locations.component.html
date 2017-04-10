@@ -1,7 +1,7 @@
 <h2>Item Locations</h2>
 <ul class="list-group">
     <div *ngFor="let area of areaKeys">
-        <li *ngFor="let itemLocation of itemLocations[area]" class="list-group-item">
+        <li *ngFor="let itemLocation of itemLocations[area]" class="list-group-item item-{{ area.toLowerCase() }}">
             <h4>{{ itemLocation.location }}</h4>
             <span>{{ area }}</span>
             <span class="item-original">{{ itemLocation.item }}</span>

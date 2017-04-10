@@ -1,4 +1,24 @@
 .item-original {
-    color: #bbb;
+    color: #999;
     margin-left: 1em;
+}
+
+.item-chozo {
+    background-color: #FCEBDE;
+}
+
+.item-phendrana {
+    background-color: #DEF3FD;
+}
+
+.item-tallon {
+    background-color: #DEFDE0;
+}
+
+.item-mines {
+    background-color: #E4DEFD;
+}
+
+.item-magmoor {
+    background-color: #FDDFDF;
 }
