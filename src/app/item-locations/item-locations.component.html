@@ -17,11 +17,13 @@
             <h4>{{ itemLocation.location }}</h4>
             <span>{{ itemLocation.area }}</span>
             <span class="item-original">{{ itemLocation.item }}</span>
-            <div class="input-group-btn">
-                <label class="btn btn-default" [(ngModel)]="itemLocation.found" btnCheckbox>Found</label>
-                <label class="btn btn-default" [(ngModel)]="itemLocation.obtained" *ngIf="itemLocation.found" btnCheckbox>Obtained</label>
-            </div>
-            <input class="form-control" type="text" [(ngModel)]="itemLocation.actualItem" *ngIf="itemLocation.found" style="display:table-cell;"/>
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <label class="btn btn-default" [(ngModel)]="itemLocation.found" btnCheckbox>Found</label>
+                    <label class="btn btn-default" [(ngModel)]="itemLocation.obtained" *ngIf="itemLocation.found" btnCheckbox>Obtained</label>
+                </div>
+                <input class="form-control" type="text" [(ngModel)]="itemLocation.actualItem" *ngIf="itemLocation.found"/>
+            </div> 
         </li>
     </ng-container>
 </ul>
