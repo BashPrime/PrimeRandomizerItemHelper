@@ -12,18 +12,16 @@
     </div>
 </div>
 <ul class="list-group">
-    <div *ngFor="let area of areaKeys">
-        <ng-container *ngFor="let itemLocation of itemLocations[area]">
-            <li *ngIf="shouldShowLocation(itemLocation)" class="list-group-item item-{{ area.toLowerCase() }}">
-                <h4>{{ itemLocation.location }}</h4>
-                <span>{{ area }}</span>
-                <span class="item-original">{{ itemLocation.item }}</span>
-                <div class="input-group-btn">
-                    <label class="btn btn-default" [(ngModel)]="itemLocation.found" btnCheckbox>Found</label>
-                    <label class="btn btn-default" [(ngModel)]="itemLocation.obtained" *ngIf="itemLocation.found" btnCheckbox>Obtained</label>
-                </div>
-                <input class="form-control" type="text" [(ngModel)]="itemLocation.actualItem" *ngIf="itemLocation.found" style="display:table-cell;"/>
-            </li>
-        </ng-container>
-    </div>
+    <ng-container *ngFor="let itemLocation of itemLocations">
+        <li *ngIf="shouldShowLocation(itemLocation)" class="list-group-item item-{{ itemLocation.area.toLowerCase() }}">
+            <h4>{{ itemLocation.location }}</h4>
+            <span>{{ itemLocation.area }}</span>
+            <span class="item-original">{{ itemLocation.item }}</span>
+            <div class="input-group-btn">
+                <label class="btn btn-default" [(ngModel)]="itemLocation.found" btnCheckbox>Found</label>
+                <label class="btn btn-default" [(ngModel)]="itemLocation.obtained" *ngIf="itemLocation.found" btnCheckbox>Obtained</label>
+            </div>
+            <input class="form-control" type="text" [(ngModel)]="itemLocation.actualItem" *ngIf="itemLocation.found" style="display:table-cell;"/>
+        </li>
+    </ng-container>
 </ul>

@@ -10,9 +10,9 @@ import { ItemLocationsService } from './item-locations.service';
     providers: [ItemLocationsService]
 })
 export class ItemLocationsComponent {
-    public itemLocations: Object;
+    public itemLocations: Array<any>;
+    public areaKeys: Array<string>;
     public showArea: Object;
-    public areaKeys: Array<any>;
     public locationShowModel: string;
     constructor(private locationsService: ItemLocationsService) {
         this.locationShowModel = "all";
@@ -20,19 +20,17 @@ export class ItemLocationsComponent {
     }
 
     buildItemLocations(): void {
-        this.itemLocations = {};
+        this.itemLocations = [];
         this.showArea = {};
         this.locationsService.getItemLocations()
             .subscribe(items => {
                 for (let item of items) {
-                    let itemArea = item.area;
-                    // Group all items under the same area
-                    if (this.itemLocations[itemArea] === undefined)
-                        this.itemLocations[itemArea] = [];
-                    this.itemLocations[itemArea].push(this.processItemLocation(item));
+                    // Build showArea model from item locations
+                    if (this.showArea[item.area] === undefined)
+                        this.showArea[item.area] = true;
+                    this.itemLocations.push(this.processItemLocation(item));
                 }
-                this.areaKeys = Object.keys(this.itemLocations);
-                this.buildShowAreaModel();
+                this.areaKeys = Object.keys(this.showArea);
             });
     }
 
@@ -40,14 +38,7 @@ export class ItemLocationsComponent {
         itemLocation.found = false;
         itemLocation.obtained = false;
         itemLocation.actualItem = "";
-        //delete itemLocation.area;
         return itemLocation;
-    }
-
-    buildShowAreaModel(): void {
-        for (let area of this.areaKeys) {
-            this.showArea[area] = true;
-        }
     }
 
     shouldShowLocation(itemLocation): boolean {
