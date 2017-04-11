@@ -17,6 +17,7 @@
                     <label class="btn btn-default" [(ngModel)]="itemLocation.found" btnCheckbox>Found</label>
                     <label class="btn btn-default" [(ngModel)]="itemLocation.obtained" *ngIf="itemLocation.found" btnCheckbox>Obtained</label>
                 </div>
+                <input class="form-control" type="text" [(ngModel)]="itemLocation.actualItem" *ngIf="itemLocation.found" style="display:table-cell;"/>
             </li>
         </ng-container>
     </div>

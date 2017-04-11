@@ -14,12 +14,12 @@ export class ItemLocationsComponent {
     public areaKeys: Array<any>;
     public locationShowModel: string;
     constructor(private locationsService: ItemLocationsService) {
-        this.itemLocations = {};
-        this.buildItemLocations();
         this.locationShowModel = "all";
+        this.buildItemLocations();
     }
 
     buildItemLocations(): void {
+        this.itemLocations = {};
         this.locationsService.getItemLocations()
             .subscribe(items => {
                 for (let item of items) {
@@ -36,6 +36,7 @@ export class ItemLocationsComponent {
     processItemLocation(itemLocation): Object {
         itemLocation.found = false;
         itemLocation.obtained = false;
+        itemLocation.actualItem = "";
         delete itemLocation.area;
         return itemLocation;
     }
