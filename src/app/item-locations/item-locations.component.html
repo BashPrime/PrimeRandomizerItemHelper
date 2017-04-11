@@ -1,5 +1,10 @@
 <h2>Item Locations</h2>
-<div class="input-group">
+<div class="input-group item-area-btns">
+    <div class="input-group-btn">
+        <label *ngFor="let area of areaKeys" class="btn btn-default area-btn-{{ area.toLowerCase() }}"  [(ngModel)]="showArea[area]" btnCheckbox>{{ area }}</label>
+    </div>
+</div>
+<div class="input-group item-status-btns">
     <div class="input-group-btn">
         <label class="btn btn-default" [(ngModel)]="locationShowModel" btnRadio="all">All</label>
         <label class="btn btn-default" [(ngModel)]="locationShowModel" btnRadio="found">Found</label>

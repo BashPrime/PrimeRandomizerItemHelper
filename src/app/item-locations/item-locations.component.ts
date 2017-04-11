@@ -11,6 +11,7 @@ import { ItemLocationsService } from './item-locations.service';
 })
 export class ItemLocationsComponent {
     public itemLocations: Object;
+    public showArea: Object;
     public areaKeys: Array<any>;
     public locationShowModel: string;
     constructor(private locationsService: ItemLocationsService) {
@@ -20,6 +21,7 @@ export class ItemLocationsComponent {
 
     buildItemLocations(): void {
         this.itemLocations = {};
+        this.showArea = {};
         this.locationsService.getItemLocations()
             .subscribe(items => {
                 for (let item of items) {
@@ -30,6 +32,7 @@ export class ItemLocationsComponent {
                     this.itemLocations[itemArea].push(this.processItemLocation(item));
                 }
                 this.areaKeys = Object.keys(this.itemLocations);
+                this.buildShowAreaModel();
             });
     }
 
@@ -37,17 +40,26 @@ export class ItemLocationsComponent {
         itemLocation.found = false;
         itemLocation.obtained = false;
         itemLocation.actualItem = "";
-        delete itemLocation.area;
+        //delete itemLocation.area;
         return itemLocation;
     }
 
+    buildShowAreaModel(): void {
+        for (let area of this.areaKeys) {
+            this.showArea[area] = true;
+        }
+    }
+
     shouldShowLocation(itemLocation): boolean {
-        if (this.locationShowModel === "all")
-            return true;
-        else if (this.locationShowModel === "found" && itemLocation.found === true)
-            return true;
-        else if (this.locationShowModel === "remaining" && (itemLocation.obtained === undefined || itemLocation.obtained === false))
-            return true;
+        if (this.showArea[itemLocation.area] === true) {
+            if (this.locationShowModel === "all")
+                return true;
+            else if (this.locationShowModel === "found" && itemLocation.found === true)
+                return true;
+            else if (this.locationShowModel === "remaining" && (itemLocation.obtained === undefined || itemLocation.obtained === false))
+                return true;
+        }
+        
         return false;
     }
 }
