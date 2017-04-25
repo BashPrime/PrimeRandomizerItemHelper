@@ -10,7 +10,7 @@ export class ItemLocationsService {
     constructor(private http: Http) {
     }
 
-    public getItemLocations(): Observable<any> {
+    public retrieveItemLocations(): Observable<any> {
         return this.http.request("./assets/json/locations.json")
             .map(res => res.json());
     }

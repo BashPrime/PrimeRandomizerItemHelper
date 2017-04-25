@@ -22,7 +22,7 @@ export class ItemLocationsComponent {
     buildItemLocations(): void {
         this.itemLocations = [];
         this.showArea = {};
-        this.locationsService.getItemLocations()
+        this.locationsService.retrieveItemLocations()
             .subscribe(items => {
                 for (let item of items) {
                     // Build showArea model from item locations
