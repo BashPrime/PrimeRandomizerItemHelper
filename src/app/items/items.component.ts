@@ -25,7 +25,7 @@ export class ItemsComponent implements OnInit {
             .subscribe(items => {
                 for (let item of items) {
                     if (this.itemsList[item.item] === undefined)
-                        this.itemsList[item.item] = {found: 0, obtained: 0, total: 0};
+                        this.itemsList[item.item] = {found: 0, obtained: 0, total: 1};
                     else
                         this.itemsList[item.item]["total"] += 1;
                 }
