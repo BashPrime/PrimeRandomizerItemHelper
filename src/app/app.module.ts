@@ -8,12 +8,14 @@ import { ButtonsModule } from 'ng2-bootstrap/buttons';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation.component';
 import { ItemLocationsComponent } from './item-locations/item-locations.component';
+import { ItemsComponent } from './items/items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    ItemLocationsComponent
+    ItemLocationsComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class ItemLocationsComponent {
     public areaKeys: Array<string>;
     public showArea: Object;
     public locationShowModel: string;
-    constructor(private locationsService: ItemLocationsService) {
+    constructor(private _locationsService: ItemLocationsService) {
         this.locationShowModel = "all";
         this.buildItemLocations();
     }
@@ -22,7 +22,7 @@ export class ItemLocationsComponent {
     buildItemLocations(): void {
         this.itemLocations = [];
         this.showArea = {};
-        this.locationsService.retrieveItemLocations()
+        this._locationsService.retrieveItemLocations()
             .subscribe(items => {
                 for (let item of items) {
                     // Build showArea model from item locations
