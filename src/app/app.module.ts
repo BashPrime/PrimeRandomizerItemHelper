@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation.component';
 import { ItemLocationsComponent } from './item-locations/item-locations.component';
 import { ItemsComponent } from './items/items.component';
+import { AlphaSortPipe } from './alpha-sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     ItemLocationsComponent,
-    ItemsComponent
+    ItemsComponent,
+    AlphaSortPipe
   ],
   imports: [
     BrowserModule,

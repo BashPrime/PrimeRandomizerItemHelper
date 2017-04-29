@@ -1,6 +1,6 @@
 <h2>Items</h2>
 <ul class="list-group">
-    <li *ngFor="let item of itemKeys" class="list-group-item">
+    <li *ngFor="let item of itemKeys | alphaSort" class="list-group-item">
         <div class="row">
             <div class="col-xs-6"><span class="item-name">{{ item }}</span></div>
             <div class="col-xs-3"><span>{{ itemsList[item].found }} / {{ itemsList[item].total }} found</span></div>
