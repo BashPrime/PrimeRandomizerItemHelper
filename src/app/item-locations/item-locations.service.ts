@@ -58,24 +58,12 @@ export class ItemLocationsService {
         return itemLocation;
     }
 
-    public getItemLocations(): Array<any> {
-        return this.itemLocations;
-    }
-
     public getItemLocationsObservable(): Observable<Array<any>> {
         return this.itemLocationsSubject.asObservable();
     }
 
-    public getItems(): Object {
-        return this.items;
-    }
-
     public getItemsObservable(): Observable<Object> {
         return this.itemsSubject.asObservable();
-    }
-
-    public getAreas(): Array<string> {
-        return this.areas;
     }
 
     public getAreasObservable(): Observable<Array<string>> {

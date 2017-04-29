@@ -11,26 +11,13 @@ export class ItemsComponent implements OnInit {
     public itemKeys: Array<string>;
 
     constructor(private _locationsService: ItemLocationsService) {
-        this.buildItemsList();
     }
-
-
 
     ngOnInit() {
-    }
-
-    buildItemsList(): void {
-        this.itemsList = {};
-        this._locationsService.retrieveItemLocationsJson()
-            .subscribe(items => {
-                for (let item of items) {
-                    if (this.itemsList[item.item] === undefined)
-                        this.itemsList[item.item] = {found: 0, obtained: 0, total: 1};
-                    else
-                        this.itemsList[item.item]["total"] += 1;
-                }
+        this._locationsService.getItemsObservable()
+            .subscribe(res => {
+                this.itemsList = res;
                 this.itemKeys = Object.keys(this.itemsList);
             });
-  }
-
+    }
 }

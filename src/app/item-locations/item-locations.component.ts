@@ -18,7 +18,7 @@ export class ItemLocationsComponent {
         this.locationShowModel = "all";
     }
 
-    public ngOnInit(): void {
+    ngOnInit() {
         this.itemLocations = this._locationsService.getItemLocationsObservable();
         
         // Get item areas from observable object, set up showArea model
@@ -30,7 +30,6 @@ export class ItemLocationsComponent {
     }
 
     private buildShowAreaModel(): void {
-        this.showArea = {};
         for (let area of this.areaKeys)
             this.showArea[area] = true;
     }
