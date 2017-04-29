@@ -1,7 +1,7 @@
 <h2>Item Locations</h2>
 <div class="input-group item-area-btns">
     <div class="input-group-btn">
-        <label *ngFor="let area of areaKeys" class="btn btn-default area-btn-{{ area.toLowerCase() }}"  [(ngModel)]="showArea[area]" btnCheckbox>{{ area }}</label>
+        <label *ngFor="let area of areaKeys" class="btn btn-default area-btn-{{ area.toLowerCase() }}" [(ngModel)]="showArea[area]" btnCheckbox>{{ area }}</label>
     </div>
 </div>
 <div class="input-group item-status-btns">
@@ -12,7 +12,7 @@
     </div>
 </div>
 <ul class="list-group">
-    <ng-container *ngFor="let itemLocation of itemLocations">
+    <ng-container *ngFor="let itemLocation of itemLocations2 | async">
         <li *ngIf="shouldShowLocation(itemLocation)" class="list-group-item item-{{ itemLocation.area.toLowerCase() }}">
             <h4>{{ itemLocation.location }}</h4>
             <span>{{ itemLocation.area }}</span>

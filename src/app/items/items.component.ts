@@ -21,7 +21,7 @@ export class ItemsComponent implements OnInit {
 
     buildItemsList(): void {
         this.itemsList = {};
-        this._locationsService.retrieveItemLocations()
+        this._locationsService.retrieveItemLocationsJson()
             .subscribe(items => {
                 for (let item of items) {
                     if (this.itemsList[item.item] === undefined)

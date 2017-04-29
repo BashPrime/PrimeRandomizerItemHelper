@@ -6,23 +6,40 @@ import { ItemLocationsService } from './item-locations.service';
 @Component({
     selector: 'item-locations',
     templateUrl: './item-locations.component.html',
-    styleUrls: ['item-locations.css'],
-    providers: [ItemLocationsService]
+    styleUrls: ['item-locations.css']
 })
 export class ItemLocationsComponent {
     public itemLocations: Array<any>;
+    public itemLocations2: Observable<Array<any>>;
     public areaKeys: Array<string>;
     public showArea: Object;
     public locationShowModel: string;
-    constructor(private _locationsService: ItemLocationsService) {
+    constructor(public _locationsService: ItemLocationsService) {
+        this.showArea = {};
         this.locationShowModel = "all";
-        this.buildItemLocations();
+    }
+
+    public ngOnInit(): void {
+        this.itemLocations2 = this._locationsService.getItemLocationsObservable();
+        
+        // Get item areas from observable object, set up showArea model
+        this._locationsService.getAreasObservable()
+            .subscribe(items => {
+                this.areaKeys = items;
+                this.buildShowAreaModel();
+            });
+    }
+
+    private buildShowAreaModel(): void {
+        this.showArea = {};
+        for (let area of this.areaKeys)
+            this.showArea[area] = true;
     }
 
     buildItemLocations(): void {
         this.itemLocations = [];
         this.showArea = {};
-        this._locationsService.retrieveItemLocations()
+        this._locationsService.retrieveItemLocationsJson()
             .subscribe(items => {
                 for (let item of items) {
                     // Build showArea model from item locations
