@@ -12,7 +12,7 @@
     </div>
 </div>
 <ul class="list-group">
-    <ng-container *ngFor="let itemLocation of itemLocations2 | async">
+    <ng-container *ngFor="let itemLocation of itemLocations | async">
         <li *ngIf="shouldShowLocation(itemLocation)" class="list-group-item item-{{ itemLocation.area.toLowerCase() }}">
             <h4>{{ itemLocation.location }}</h4>
             <span>{{ itemLocation.area }}</span>

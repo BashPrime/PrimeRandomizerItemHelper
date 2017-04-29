@@ -9,8 +9,7 @@ import { ItemLocationsService } from './item-locations.service';
     styleUrls: ['item-locations.css']
 })
 export class ItemLocationsComponent {
-    public itemLocations: Array<any>;
-    public itemLocations2: Observable<Array<any>>;
+    public itemLocations: Observable<Array<any>>;
     public areaKeys: Array<string>;
     public showArea: Object;
     public locationShowModel: string;
@@ -20,7 +19,7 @@ export class ItemLocationsComponent {
     }
 
     public ngOnInit(): void {
-        this.itemLocations2 = this._locationsService.getItemLocationsObservable();
+        this.itemLocations = this._locationsService.getItemLocationsObservable();
         
         // Get item areas from observable object, set up showArea model
         this._locationsService.getAreasObservable()
@@ -34,28 +33,6 @@ export class ItemLocationsComponent {
         this.showArea = {};
         for (let area of this.areaKeys)
             this.showArea[area] = true;
-    }
-
-    buildItemLocations(): void {
-        this.itemLocations = [];
-        this.showArea = {};
-        this._locationsService.retrieveItemLocationsJson()
-            .subscribe(items => {
-                for (let item of items) {
-                    // Build showArea model from item locations
-                    if (this.showArea[item.area] === undefined)
-                        this.showArea[item.area] = true;
-                    this.itemLocations.push(this.processItemLocation(item));
-                }
-                this.areaKeys = Object.keys(this.showArea);
-            });
-    }
-
-    processItemLocation(itemLocation): Object {
-        itemLocation.found = false;
-        itemLocation.obtained = false;
-        itemLocation.actualItem = "";
-        return itemLocation;
     }
 
     shouldShowLocation(itemLocation): boolean {
