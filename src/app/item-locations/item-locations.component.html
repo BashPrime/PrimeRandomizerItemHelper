@@ -3,6 +3,7 @@
     <div class="input-group-btn">
         <label *ngFor="let area of areaKeys" class="btn btn-default area-btn-{{ area.toLowerCase() }}" [(ngModel)]="showArea[area]" btnCheckbox>{{ area }}</label>
     </div>
+    <button class="btn btn-default area-selectall-btn" (click)="selectOrDeselectAll()">Select All</button>
 </div>
 <div class="input-group item-status-btns">
     <div class="input-group-btn">

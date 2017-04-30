@@ -34,6 +34,18 @@ export class ItemLocationsComponent {
             this.showArea[area] = true;
     }
 
+    selectOrDeselectAll(): void {
+        let atLeastOneSelected = false;
+        for (let area of this.areaKeys) {
+            if (this.showArea[area])
+                atLeastOneSelected = true;
+                break;
+        }
+
+        for (let area of this.areaKeys)
+            this.showArea[area] = atLeastOneSelected ? false : true;
+    }
+
     shouldShowLocation(itemLocation): boolean {
         if (this.showArea[itemLocation.area] === true) {
             if (this.locationShowModel === "all")
