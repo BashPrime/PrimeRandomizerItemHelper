@@ -9,7 +9,7 @@ import { ItemLocationsService } from './item-locations.service';
     styleUrls: ['item-locations.css']
 })
 export class ItemLocationsComponent {
-    public itemLocations: Observable<Array<any>>;
+    public itemLocations: Array<any>;
     public areaKeys: Array<string>;
     public showArea: Object;
     public locationShowModel: string;
@@ -19,8 +19,12 @@ export class ItemLocationsComponent {
     }
 
     ngOnInit() {
-        this.itemLocations = this._locationsService.getItemLocationsObservable();
-        
+        // Get item locations
+        this._locationsService.getItemLocationsObservable()
+            .subscribe(items => {
+                this.itemLocations = items;
+            });
+                    
         // Get item areas from observable object, set up showArea model
         this._locationsService.getAreasObservable()
             .subscribe(items => {
