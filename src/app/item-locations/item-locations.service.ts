@@ -30,19 +30,19 @@ export class ItemLocationsService {
                 for (let item of itemLocations) {
                     if (this.areas.length < 1 || this.areas[this.areas.length - 1] !== item.area) {
                         this.areas.push(item.area);
-                        this.areasSubject.next(this.areas);
                     }
                     // Add item location
                     this.itemLocations.push(this.processItemLocation(item));
-                    this.itemLocationsSubject.next(this.itemLocations);
 
                     // Add item (with counter info)
                     if (this.items[item.item] === undefined)
                         this.items[item.item] = {found: 0, obtained: 0, total: 1};
                     else
                         this.items[item.item]["total"] += 1;
-                    this.itemsSubject.next(this.items);
-                } 
+                }
+                this.areasSubject.next(this.areas);
+                this.itemLocationsSubject.next(this.itemLocations);
+                this.itemsSubject.next(this.items); 
             });
     }
 
@@ -60,6 +60,11 @@ export class ItemLocationsService {
 
     public getItemLocationsObservable(): Observable<Array<any>> {
         return this.itemLocationsSubject.asObservable();
+    }
+
+    public setItemLocationsObservable(newItemLocations: Array<any>): void {
+        this.itemLocations = newItemLocations;
+        this.itemLocationsSubject.next(newItemLocations);
     }
 
     public getItemsObservable(): Observable<Object> {
